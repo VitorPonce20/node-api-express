@@ -41,6 +41,13 @@ const Charmander = new Poke({
 
 const Bulbasaur = new Poke({
     name:'Bulbasaur',
+    type:'Grass',
+    shiny:false, 
+    tags:['water', 'shiny']
+})
+
+const Squirtle = new Poke({
+    name:'Squirtle',
     type:'Water',
     shiny:false, 
     tags:['water', 'shiny']

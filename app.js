@@ -76,7 +76,11 @@ app.get('/', (req,res) => {
 })
 
 app.post('/create', (req,res) => {        
-    res.send("success");        
+    res.send("success");  
+    let body = req.body
+    console.log("body")
+    console.log(body)
+
     const Charmander = new Poke({
         name:'Charmander',
         type:'Fire',
@@ -100,4 +104,20 @@ app.post('/create', (req,res) => {
     Bulbasaur.save();    
     Charmander.save();
     Squirtle.save();
+})
+
+app.post('/get', (req,res) => {        
+    res.send("success");  
+    let body = req.body
+    console.log("body")
+    console.log(body)
+
+    const Charmander = new Poke({
+        name:'Charmander',
+        type:'Fire',
+        shiny:true, 
+        tags:['fire', 'shiny']
+    })
+    
+   
 })
